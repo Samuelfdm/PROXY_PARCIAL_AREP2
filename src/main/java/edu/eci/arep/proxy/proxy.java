@@ -19,7 +19,7 @@ public class proxy {
     private int aux = 0;
     private static final String USER_AGENT = "Mozilla/5.0";
     //private static final String[] SERVERS = new String[]{"http://localhost:8081/","http://localhost:8082/"};
-    private static final String[] SERVERS = new String[]{"http://ec2-54-158-55-143.compute-1.amazonaws.com:8081", "http://ec2-54-175-71-84.compute-1.amazonaws.com:8081"};
+    private static final String[] SERVERS = new String[]{"http://ec2-54-158-55-143.compute-1.amazonaws.com:8081/", "http://ec2-54-175-71-84.compute-1.amazonaws.com:8081/"};
 
     @GetMapping("factors")
     public ResponseEntity<?> factors(@RequestParam("value") String value) throws IOException {
