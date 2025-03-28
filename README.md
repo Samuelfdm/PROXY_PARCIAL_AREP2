@@ -50,6 +50,10 @@ http://localhost:8080/factors?value=15
 http://localhost:8080/primes?value=100
 ```
 
+![img_1.png](src%2Fmain%2Fresources%2Fimg%2Fimg_1.png)
+![img_2.png](src%2Fmain%2Fresources%2Fimg%2Fimg_2.png)
+![img_3.png](src%2Fmain%2Fresources%2Fimg%2Fimg_3.png)
+
 ## Cómo Desplegar en AWS EC2
 - Crear **tres instancias EC2**.
 - En cada instancia, instalar Java y Maven:
