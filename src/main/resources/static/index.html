@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PARCIAL 2 - AREP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Factors</h1>
+<form>
+    <label for="operation">Type the operation: factors or primes</label><br>
+    <input type="text" id="operation" name="operation" placeholder="factors"><br><br>
+
+    <label for="input">Type the number to search:</label><br>
+    <input type="text" id="input" name="input" placeholder="16"><br><br>
+
+    <input type="button" value="Submit" onclick="loadGetMsg()">
+</form>
+<div id="getrespmsg"></div>
+
+<script>
+    function loadGetMsg() {
+        let operationVar = document.getElementById("operation").value;
+        let inputVar = document.getElementById("input").value;
+
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            document.getElementById("getrespmsg").innerHTML =
+            this.responseText;
+        }
+        xhttp.open("GET", "http://localhost:8080/"+operationVar+"?value="+inputVar);
+        xhttp.send();
+    }
+</script>
+</body>
+</html>
