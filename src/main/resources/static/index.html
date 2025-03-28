@@ -28,7 +28,7 @@
             document.getElementById("getrespmsg").innerHTML =
             this.responseText;
         }
-        xhttp.open("GET", "http://localhost:8080/"+operationVar+"?value="+inputVar);
+        xhttp.open("GET", "http://ec2-3-89-98-143.compute-1.amazonaws.com:8080/"+operationVar+"?value="+inputVar);
         xhttp.send();
     }
 </script>
